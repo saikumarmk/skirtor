@@ -217,14 +217,22 @@ def draw_torus_schematic(ax, oa, inclination, R):
 
 # Title and description
 st.markdown("# Create your own AGN!")
-st.markdown(
-    """
+st.markdown("""
 This app displays the emission from an AGN as a function of various torus parameters 
 using a radiative transfer based clumpy torus model **SKIRTOR** 
 ([Stalevski+'12](https://ui.adsabs.harvard.edu/abs/2012MNRAS.420.2756S) and 
 [Stalevski+'16](https://ui.adsabs.harvard.edu/abs/2016MNRAS.458.2288S)).
-"""
-)
+
+## How to use
+Use the sliders on the left to change the geometry and the distribution of dust within the torus. The first figure shows the shape of your torus with black hole at the center. The second figure shows the total AGN emission and the torus only emission as seen by the observer marked in the first figure.
+
+
+
+## Notes
+Source code available [here](https://github.com/saikumarmk/skirtor). Original app [here](https://skirtor.streamlit.app/)
+
+Credits to [Marko Stalevski](https://markostalevski.wixsite.com/astro) for the models.
+""")
 
 # Load database
 try:
@@ -412,3 +420,4 @@ with col2:
     else:
         st.error(f"Model not found for selected parameters")
         st.info(f"Parameters: t={t}, p={p}, q={q}, oa={oa}, R={R}, Mcl={Mcl}, i={i}")
+
