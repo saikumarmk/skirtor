@@ -3,3 +3,4 @@ streamlit
 plotly
 h5py
 tqdm
+matplotlib
